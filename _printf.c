@@ -31,7 +31,7 @@ break;
 case 's':
 str = va_arg(args, char *);
 if (str == NULL)
-str = "(nil)";
+str = "(null)";
 print_count += string_print(str);
 break;
 case 'd':
