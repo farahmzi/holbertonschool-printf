@@ -14,8 +14,8 @@ int print_count = 0;
 char *str;
 va_list args;
 va_start(args, format);
-if(format[0] == '%' && format[1] == '\0')
-return 0;
+if (!format)
+return (-1);
 for (i = 0; format[i]; i++)
 {
 if (format[i] == '%' && format[i + 1])
