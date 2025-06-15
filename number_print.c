@@ -9,13 +9,14 @@ int number_print(int num)
 char c;
 int count;
 long n = num;
-
+ count = 0;
 if (n < 0)
 {
 write(1, "-", 1);
 n = -n;
+count ++;
 }
- count = 0;
+
 if (n / 10)
 count += number_print(n / 10);
 c = n % 10 + '0';
