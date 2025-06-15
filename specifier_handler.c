@@ -5,14 +5,14 @@
 /**
 *specifier_handler -handles stdout based on spesifer (%) format
 *@format: accept %c,%s,%i,%d
-* @args: Argument list
+*@i: itterator
+*@count: number of printed chars
+*@args: Argument list
 *Return: number of printed characters
 */
-int specifier_handler (va_list args, const char *format)
+int specifier_handler (va_list args, const char *format, int i, int count)
 {
 char *str;
-int i;
-int count;
 count = 0;
 for (i = 0; format[i]; i++)
 {
