@@ -13,6 +13,8 @@ int print_count = 0;
 va_list args;
 int i;
 int count;
+i = 0;
+count = 0;
 va_start(args, format);
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);
