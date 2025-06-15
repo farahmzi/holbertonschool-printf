@@ -39,6 +39,7 @@ case 'i':
 count += number_print(va_arg(args, int));
 break;
 default:
+write(1, "%", 1);
 write(1, &format[i], 1);
 count += 2;
 break;
