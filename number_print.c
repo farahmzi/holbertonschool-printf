@@ -7,15 +7,18 @@
 int number_print(int num)
 {
 char c;
-if (num < 0)
+int count;
+long n = num;
+
+if (n < 0)
 {
 write(1, "-", 1);
-num = -num;
-return (1 + number_print(num));
+n = -n;
 }
-if (num / 10)
-return (1 + number_print(num / 10));
-c = num % 10 + '0';
+ count = 0;
+if (n / 10)
+count += number_print(n / 10);
+c = n % 10 + '0';
 write(1, &c, 1);
-return (1);
+return (count + 1);
 }
